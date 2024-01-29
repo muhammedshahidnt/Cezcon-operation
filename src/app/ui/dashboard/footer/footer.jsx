@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Footer = () => {
     return (
 
-        <div className='flex justify-between  absolute inset-x-0 bottom-0 h-16'>
+        <div className='flex justify-between  '>
             <div className=''>
                 2024 © 
                

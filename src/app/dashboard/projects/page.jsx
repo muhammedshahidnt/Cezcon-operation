@@ -1,8 +1,9 @@
 import React from 'react'
+import Link from 'next/link'
 
 const tabledata = [
   {
-    slno: 1,
+    id: 1,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -12,7 +13,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 2,
+    id: 2,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -22,7 +23,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 3,
+    id: 3,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -32,7 +33,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 4,
+    id: 4,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -42,7 +43,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 1,
+    id: 5,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -52,7 +53,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 2,
+    id: 6,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -62,7 +63,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 3,
+    id: 7,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -72,7 +73,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 4,
+    id: 8,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -82,7 +83,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 1,
+    id: 9,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -92,7 +93,7 @@ const tabledata = [
     action: "view"
   },
   {
-    slno: 2,
+    id: 10,
     project_number: "sp:236",
     project_title: "oprration",
     company: "cezcon",
@@ -101,66 +102,7 @@ const tabledata = [
     status: "pending",
     action: "view"
   },
-  {
-    slno: 3,
-    project_number: "sp:236",
-    project_title: "oprration",
-    company: "cezcon",
-    type: "",
-    project_date: " 20-05-2002",
-    status: "pending",
-    action: "view"
-  },
-  {
-    slno: 4,
-    project_number: "sp:236",
-    project_title: "oprration",
-    company: "cezcon",
-    type: "",
-    project_date: " 20-05-2002",
-    status: "pending",
-    action: "view"
-  },
-  {
-    slno: 1,
-    project_number: "sp:236",
-    project_title: "oprration",
-    company: "cezcon",
-    type: "",
-    project_date: " 20-05-2002",
-    status: "pending",
-    action: "view"
-  },
-  {
-    slno: 2,
-    project_number: "sp:236",
-    project_title: "oprration",
-    company: "cezcon",
-    type: "",
-    project_date: " 20-05-2002",
-    status: "pending",
-    action: "view"
-  },
-  {
-    slno: 3,
-    project_number: "sp:236",
-    project_title: "oprration",
-    company: "cezcon",
-    type: "",
-    project_date: " 20-05-2002",
-    status: "pending",
-    action: "view"
-  },
-  {
-    slno: 4,
-    project_number: "sp:236",
-    project_title: "oprration",
-    company: "cezcon",
-    type: "",
-    project_date: " 20-05-2002",
-    status: "pending",
-    action: "view"
-  },
+ 
 ]
 
 const Projectpage = () => {
@@ -172,7 +114,6 @@ const Projectpage = () => {
       <div>
         <div className="overflow-x-auto">
           <table className="table table-zebra">
-            {/* head */}
             <thead>
               <tr>
                 <th>sl_no</th>
@@ -188,8 +129,8 @@ const Projectpage = () => {
             <tbody>
               {tabledata.map((data) => {
                 return (
-                  <tr key={data.slno}>
-                    <th>{data.slno}</th>
+                  <tr key={data.id}>
+                    <th>{data.id}</th>
                     <td>{data.project_number}</td>
                     <td>{data.project_title}</td>
                     <td>{data.company}</td>
@@ -202,9 +143,13 @@ const Projectpage = () => {
                       </div>
                     </td>
                     <td>
+                     <Link href={`/dashboard/projects/${data.id}`}>
                       <button className="btn btn-ghost ">
                       {data.action}
                       </button>
+                      
+                     </Link>
+                      
                       </td>
                   </tr>
                 )

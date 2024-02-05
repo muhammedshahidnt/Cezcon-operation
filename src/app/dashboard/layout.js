@@ -3,12 +3,15 @@ import Footer from '../ui/dashboard/footer/footer'
 
 
 const Layout = ({ children }) => {
+  // console.log('====================================');
+  // console.log(children);
+  // console.log('====================================');
   return (
-    <div>
+      <div>
         <Header />
         {children}
         <Footer />
-    </div>
+      </div>
   )
 }
 

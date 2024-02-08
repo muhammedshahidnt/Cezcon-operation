@@ -250,14 +250,18 @@ export const addUser = async (formData) => {
 
 
 
-export const authenticate = async (formData) => {
+export const authenticate = async ( formData) => {
     
     const { username, password } = Object.fromEntries(formData);
   
-
     try {
         await signIn("credentials", { username, password });
-    } catch (err) {
+    }  catch (err) {
+        
+        
+        //   return "Wrong Credentials";
+        
+      
         console.log(err);
         throw err
     }

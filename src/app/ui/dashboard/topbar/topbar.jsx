@@ -16,7 +16,7 @@ const Topbar = () => {
         setActiveTab(tabName);
     };
     return (
-        <div className="navbar  animated md:w-auto border-2 shadow-xl border-x-4 bg-white ">
+        <div className="navbar  animated md:w-auto border-2 shadow-xl border-x-4 bg-white  ">
             <div className={`dropdown ${activeTab === 'projects' ? 'bg-green-500  rounded-lg' : ''}`}
                 onClick={() => dropdown()}>
                 <div

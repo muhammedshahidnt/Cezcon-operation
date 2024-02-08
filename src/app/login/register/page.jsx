@@ -83,22 +83,43 @@ const page = () => {
     //       {/* <div className="mt-4 text-sm text-gray-600 text-center">
     //                     <p>or with email</p>
     //                 </div> */}
-    //       <form action={addUser} method="POST" className="space-y-4">
+    //       <form action={addUser} className="space-y-4">
     //         <div>
-    //           <input type="text" id="username" placeholder="Username" name="username" className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" />
+    //         <input
+    //           id="username"
+    //           name="username"
+    //           type="text"
+    //           autoComplete="username"
+    //           className="mt-1 p-2 w-full border rounded-md"
+    //           placeholder='Enter Username'
+    //         />
     //         </div>
     //         <div>
-    //           <input type="text" id="email" placeholder="email" name="email" className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" />
+    //         <input
+    //           id="email"
+    //           name="email"
+    //           type="email"
+    //           autoComplete="email"
+    //           className="mt-1 p-2 w-full border rounded-md"
+    //           placeholder='Enter Email'
+    //         />
     //         </div>
     //         <div>
-    //           <input type="password" id="password" placeholder="password" name="password" className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" />
-    //         </div>
+    //         <input
+    //           id="password"
+    //           name="password"
+    //           type="password"
+    //           autoComplete="current-password"
+    //           className="mt-1 p-2 w-full border rounded-md"
+    //           placeholder='Enter Password'
+    //         />
+    //          </div>
     //         <div>
     //           <button type="submit" className="w-full bg-black text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">Sign Up</button>
     //         </div>
     //       </form>
     //       <div className="mt-4 text-sm text-gray-600 text-center">
-    //         <p>Already have an account? <a href="#" className="text-black hover:underline">Login here</a>
+    //         <p>Already have an account? <a  className="text-black hover:underline">Login here</a>
     //         </p>
     //       </div>
     //     </div>
